@@ -1,0 +1,354 @@
+@import "battle.scss";
+
+h1 { font-family: VT323; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: VT323; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: VT323; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: VT323; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: VT323; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
+body{
+    margin: 100px;
+    padding: 0;
+    font-family: 'VT323';
+    font-size: 1.2rem;
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+//global statements
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        color: #733e38;
+    }
+}
+
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+//navbar
+
+.header{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+    color: white;
+}
+
+.top-bar{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    p{
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-size: 2rem;
+        span{
+            font-size: 1rem;
+        }
+    }
+}
+
+nav{
+    ul{
+        display: flex;
+        gap: 20px;
+    }
+    li{
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: 0.2s;
+        width: 100px;
+        height: 50px;
+        align-items: center;
+        text-align: center;
+        
+        margin: 15px 0px 0px 0px;
+        background-color: #362313;
+        box-shadow: 0px 0px 0px 4px #5b4112;
+        color: rgb(142, 142, 142);
+        &.active{
+            background-color: #794e25;
+            box-shadow: 0px 0px 0px 4px #fce448;
+            color: white;
+            transform: scaleX(103%);
+        }
+        &:hover{
+            background-color: #794e25;
+            box-shadow: 0px 0px 0px 4px #fce448;
+            color: white;
+            transform: scaleX(103%);
+        }
+        
+    }
+}
+
+
+
+//title screen
+
+//content
+
+.background-pixel{
+    background-color: #ead4aa;
+    border: 5px solid #733e38;
+    outline: 3px solid #4d2a26;
+    box-shadow: 1px 2px 2px 2px #382014,
+                inset 3px 3px #c07956;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main{
+        display: flex;
+        .menu {
+            margin-left: 1rem;
+            width: 50rem;
+            padding: 20px;
+            color: black;
+        }
+    }
+}
+
+.mission {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+}
+.profile_showcase{
+    max-width: 15rem;
+    p{
+        font-size: 1.2rem;
+    }
+    div{
+        text-align: center;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    .col-main{
+        width: 25rem;
+        span{
+            font-size: 1.4rem;
+        }
+    }
+    .col-exp{
+        width: 40%;
+        
+        td{
+            font-size: 1.5rem;
+        }
+        
+        p{
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        button{
+            font-family: 'VT323';
+            margin: 0.1rem;
+            width: 6rem;
+            height: 1;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: #e0e0e0;
+                color: red;
+                transform: scale(110%);
+                border-radius: 0px;
+            }
+
+        } 
+    }
+}
+
+
+
+/*----------Frog Customization----------*/
+
+.character{
+    margin: 0;
+    padding: 0;
+    img{
+        width: 25rem;
+        width: 25rem;
+    }
+}
+
+.statistics{
+    width: 60%;
+}
+
+
+
+/*----------[Inventory]----------*/
+
+.center-title{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    padding: 0;
+
+}
+
+
+.inventory{
+    margin: 1rem;
+    width: 20rem;
+    align-items: center;
+    text-align: center;
+    
+    .item{
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        margin: 3px;
+        background-color: #c07956;
+        transition: 0.3s;
+        &:hover{
+            background-color: #a36546;
+        }
+    }
+
+}
+
+.statistics{
+    margin: 1rem;
+    width: 20rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+    td{
+        border-top: 2px solid black;
+    }
+}
+
+// Information-bar
+
+.info-bar{
+    display: flex;
+    
+    .image{
+        margin: 10px;
+        padding: 10px;
+        &.background-pixel{
+            background-color: #794e25;
+        }
+        img{
+            height: 50px;
+            width: auto;
+        }
+    }
+    .info-bar-text{
+        display: flex;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+        font-size: 1.2rem;
+        color: black;
+    }
+}
+
+/*----------[Inventory Objects]----------*/
+
+
+#item_0{
+    background-image: url('./assets/helmet.webp');
+    background-size: cover;
+}
+#item_1{
+    background-image: url('./assets/chestplate.webp');
+    background-size: cover;
+}
+#item_2{
+    background-image: url('./assets/leggins.webp');
+    background-size: cover;
+}
+#item_3{
+    background-image: url('./assets/boots.webp');
+    background-size: cover;
+}
+#item_4{
+    background-image: url('./assets/sword.webp');
+    background-size: cover;
+}
+
+/*----------[Inventory Statistics]----------*/
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #a36546;
+    border: 1px solid #4d2a26;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .popup .hide {
+    visibility: hidden;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+
+.countdown-div{
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    h1{
+        text-align: center;
+    }
+}

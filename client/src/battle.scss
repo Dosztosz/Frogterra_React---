@@ -1,0 +1,50 @@
+.battle-arena{
+    width: 40rem;
+    height: 40rem;
+    margin: auto;
+}
+
+.battle-arena-row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.character-window{
+    width: 20rem;
+    height: 20rem;
+}
+
+.character-bar{
+    span{
+        color: red;
+        font-size: 1.5rem;
+    }
+}
+
+#m_char{
+    background-image: url('../../img/froggs/regular_frog.png');
+    background-size: cover;
+}
+#e_char{
+    background-image: url('../../img/froggs/pink_frog.png');
+    background-size: cover;
+}
+
+.get-hit{
+    animation: damage 0.5s;
+}
+
+@keyframes damage{
+    0%{
+
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(115%);
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: scale(100%);
+        top: 0;
+    }
+}
