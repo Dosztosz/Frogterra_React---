@@ -1,21 +1,26 @@
-function Header(){
+import React from 'react';
+
+const Header = ({ items, onSelect }) =>{
 
 return(
 
         <div className="header">
             <nav>
                 <ul>
-                    <a href="index.php"><li class="<?php echo $main ?>">Strona Postaci</li></a>
-                    <a href="?site=mission"><li class="<?php echo $missions ?>">Misje</li></a>
-                    <a href="?site=fight"><li class="<?php echo $fight ?>" >Walka</li></a>
-                    <a href="#"><li class="<?php echo $settings ?>">Ustawienia</li></a>
+                    {items.map((item, index) => (
+                      <li key={index} onClick={() => onSelect(item)}>
+                        {item}
+                      </li>
+                    ))}
                 </ul>
             </nav>
         </div>
 
 
-)
+    )
 
 }
 
 export default Header
+
+

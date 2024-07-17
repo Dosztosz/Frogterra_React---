@@ -46,6 +46,11 @@
     top: 0;
   }
 }
+@font-face {
+  font-family: "VT323";
+  src: local("VT323-Regular"), url("./VT323-Regular.ttf") format("opentype");
+  font-weight: normal;
+}
 h1 {
   font-family: VT323;
   font-size: 24px;
@@ -263,8 +268,11 @@ nav li:hover {
   padding: 0;
 }
 .character img {
-  width: 25rem;
-  width: 25rem;
+  width: 20vw;
+}
+
+.main_frog {
+  width: 50%;
 }
 
 .statistics {
