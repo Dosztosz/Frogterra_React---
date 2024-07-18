@@ -2,6 +2,18 @@ import MainFrog from '../assets/froggs/regular_frog.png'
 
 
 function Profile(){
+    function popUp(item) {
+        var popup = document.getElementById(item);
+        popup.classList.toggle("show");
+      }
+    
+      function popOut(item) {
+        var popup = document.getElementById(item);
+        popup.classList.toggle("hide");
+      }
+
+
+
     return(
 
         <div className="row">

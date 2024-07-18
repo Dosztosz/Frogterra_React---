@@ -141,6 +141,9 @@ button {
   margin: auto;
   color: white;
 }
+.header li {
+  cursor: pointer;
+}
 
 .top-bar {
   margin: auto;
@@ -419,4 +422,8 @@ nav li:hover {
 }
 .countdown-div h1 {
   text-align: center;
+}
+
+.red {
+  color: red;
 }/*# sourceMappingURL=style.css.map */

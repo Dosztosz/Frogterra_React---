@@ -83,7 +83,12 @@ button{
     gap: 2rem;
     margin: auto;
     color: white;
+
+    li{
+        cursor: pointer;
+    }
 }
+
 
 .top-bar{
     margin: auto;
@@ -390,4 +395,8 @@ nav{
     h1{
         text-align: center;
     }
+}
+
+.red{
+    color: red;
 }
