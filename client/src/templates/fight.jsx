@@ -53,7 +53,7 @@ const FightingScene = ({ onReturnToMissions }) => {
         <>
           <h2>{message}</h2>
           <button onClick={onReturnToMissions} className="mission-button">
-            Return to Missions
+            Return to Missions {selectedItem === 'Misje' && <Missions />}
           </button>
         </>
       )}
