@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
-const FightingScene = () => {
+const FightingScene = ({ onReturnToMissions }) => {
   const [playerHealth, setPlayerHealth] = useState(100);
   const [enemyHealth, setEnemyHealth] = useState(100);
   const [message, setMessage] = useState('');
@@ -10,11 +10,11 @@ const FightingScene = () => {
     const interval = setInterval(() => {
       if (playerHealth > 0 && enemyHealth > 0) {
         // Player attacks enemy
-        const playerAttack = Math.floor(Math.random() * 10) + 1;
+        const playerAttack = Math.floor(Math.random() * 5) + 1;
         setEnemyHealth(prev => Math.max(prev - playerAttack, 0));
 
         // Enemy attacks player
-        const enemyAttack = Math.floor(Math.random() * 10) + 1;
+        const enemyAttack = Math.floor(Math.random() * 5) + 1;
         setPlayerHealth(prev => Math.max(prev - enemyAttack, 0));
       }
     }, 1000);
@@ -33,29 +33,34 @@ const FightingScene = () => {
   return (
     <div className="fighting-scene">
       <h1>Fighting Scene</h1>
-      <div className='row-2'>
-        <div className="character">
-          <h2>Player</h2>
-          <div className="health-bar">
-            <div className="health" style={{ width: `${playerHealth}%` }}></div>
-          </div>
-          <p>HP: {playerHealth}</p>
+      <div className="character">
+        <h2>Player</h2>
+        <div className="health-bar">
+          <div className="health" style={{ width: `${playerHealth}%` }}></div>
         </div>
-    
-        <div className="character">
-          <h2>Enemy</h2>
-          <div className="health-bar">
-            <div className="health" style={{ width: `${enemyHealth}%` }}></div>
-          </div>
-          <p>HP: {enemyHealth}</p>
-        </div>
+        <p>HP: {playerHealth}</p>
       </div>
-      
 
-      {message && <h2>{message}</h2>}
+      <div className="character">
+        <h2>Enemy</h2>
+        <div className="health-bar">
+          <div className="health" style={{ width: `${enemyHealth}%` }}></div>
+        </div>
+        <p>HP: {enemyHealth}</p>
+      </div>
+
+      {message && (
+        <>
+          <h2>{message}</h2>
+          <button onClick={onReturnToMissions} className="mission-button">
+            Return to Missions
+          </button>
+        </>
+      )}
     </div>
   );
 };
+
 
 
 export default FightingScene
