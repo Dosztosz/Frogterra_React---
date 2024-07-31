@@ -3,13 +3,14 @@ import Header from './templates/header'
 import Sidebar from './templates/sidebar'
 import Tips from './templates/tips'
 import Profile from './templates/profile'
-import Fight from './templates/fight'
 import Missions from './templates/missions'
+import FightingScene from './templates/fight'
 import { useState } from 'react'
 
 
 
 import './style.scss'
+
 
 
 
@@ -28,7 +29,7 @@ function App() {
               <Sidebar />
               <div className="menu background-pixel">
                   {selectedItem === 'Profil' && <Profile />}
-                  {selectedItem === 'Walka' && <Fight />}
+                  {selectedItem === 'Walka' && <FightingScene />}
                   {selectedItem === 'Misje' && <Missions />}
                   <Tips />
               </div>

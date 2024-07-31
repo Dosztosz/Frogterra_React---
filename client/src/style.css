@@ -426,4 +426,33 @@ nav li:hover {
 
 .red {
   color: red;
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.fighting-scene {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.character {
+  margin: 20px 0;
+}
+
+.health-bar {
+  width: 200px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.health {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
