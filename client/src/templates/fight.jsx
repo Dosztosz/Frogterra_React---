@@ -10,11 +10,11 @@ const FightingScene = ({ onReturnToMissions }) => {
     const interval = setInterval(() => {
       if (playerHealth > 0 && enemyHealth > 0) {
         // Player attacks enemy
-        const playerAttack = Math.floor(Math.random() * 5) + 1;
+        const playerAttack = Math.floor(Math.random() * 50) + 1;
         setEnemyHealth(prev => Math.max(prev - playerAttack, 0));
 
         // Enemy attacks player
-        const enemyAttack = Math.floor(Math.random() * 5) + 1;
+        const enemyAttack = Math.floor(Math.random() * 50) + 1;
         setPlayerHealth(prev => Math.max(prev - enemyAttack, 0));
       }
     }, 1000);
@@ -52,15 +52,14 @@ const FightingScene = ({ onReturnToMissions }) => {
       {message && (
         <>
           <h2>{message}</h2>
-          <button onClick={onReturnToMissions} className="mission-button">
-            Return to Missions {selectedItem === 'Misje' && <Missions />}
+          <button onClick={() => onSelect('Profil')} className="mission-button">
+              Powrót
           </button>
         </>
       )}
     </div>
   );
 };
-
 
 
 export default FightingScene

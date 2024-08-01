@@ -35,7 +35,7 @@ function App() {
               <Sidebar />
               <div className="menu background-pixel">
                   {selectedItem === 'Profil' && <Profile />}
-                  {selectedItem === 'Walka' && <FightingScene onReturnToMissions={handleReturnToMissions} />}
+                  {selectedItem === 'Walka' && <FightingScene />}
                   {selectedItem === 'Misje' && <Missions />}
                   <Tips />
               </div>
