@@ -39,7 +39,7 @@ function App() {
           <div className="main">
               <Sidebar username = {data.user} level = {data.level} dailyMessage={dailyMessage}/>
               <div className="menu background-pixel">
-                  {selectedItem === 'Profil' && <Profile experience = {data.experience} experienceNeeded = {data.experienceNeeded} />}
+                  {selectedItem === 'Profil' && <Profile experience = {data.experience} experienceNeeded = {data.experienceNeeded}/>}
                   {selectedItem === 'Walka' && <FightingScene />}
                   {selectedItem === 'Misje' && <Missions />}
                   <Tips />
