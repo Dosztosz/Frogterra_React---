@@ -1,7 +1,8 @@
 import MainFrog from '../assets/froggs/regular_frog.png'
 
 
-function Profile(){
+function Profile({experience, experienceNeeded}){
+
     function popUp(item) {
         var popup = document.getElementById(item);
         popup.classList.toggle("show");
@@ -22,14 +23,14 @@ function Profile(){
                     <img className='main_frog' id="main_frog" src={MainFrog} alt=""/>
                 </div>
                 <div className="top-bar">
-                    <p>EXP <span>(10 / 100)</span></p>
-                    <progress id="m_exp_char_bar" value="10" max="100"></progress>
+                    <p>EXP <span>(<span>{experience}</span> / <span>{experienceNeeded}</span>)</span></p>
+                    <progress id="m_exp_char_bar" value={experience} max={experienceNeeded}></progress>
                 </div>
             </div>
         <div>
             <h2 className="center-title">Inventory</h2>
             <div className="inventory">
-                <div className="item background-pixel popup" id="item_0" onmouseover="popUp('item_0_pop')" onmouseout="popOut('item_0_pop')">
+                <div className="item background-pixel popup" id="item_0" onMouseOver = {popUp('item_0_pop')} onMouseOut={popOut('item_0_pop')}>
                     <span className="popuptext" id="item_0_pop">
                         Hełm Lepkości
                     <br/> HP: 150 
@@ -37,7 +38,7 @@ function Profile(){
                     <br/> Lepkość: 15
                 </span>
                 </div>
-                <div className="item background-pixel popup" id="item_1" onmouseover="popUp('item_1_pop')" onmouseout="popUp('item_1_pop')">
+                <div className="item background-pixel popup" id="item_1" onMouseOver = {popUp('item_1_pop')} onMouseOut={popUp('item_1_pop')}>
                     <span className="popuptext" id="item_1_pop">
                            armor_name;
                         <br/> Zdrowie: 15
@@ -45,7 +46,7 @@ function Profile(){
                         <br/> Lepkość:  15
                     </span>
             </div>
-                <div className="item background-pixel popup" id="item_4" onmouseover="popUp('item_2_pop')" onmouseout="popUp('item_2_pop')">
+                <div className="item background-pixel popup" id="item_4" onMouseOver= {popUp('item_2_pop')} onMouseOut={popUp('item_2_pop')}>
                     <span className="popuptext" id="item_2_pop">
                             Nazwa Broni
                         <br/> Atak: 10
