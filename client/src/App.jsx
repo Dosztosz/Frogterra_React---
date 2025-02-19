@@ -42,6 +42,7 @@ function App() {
                   {selectedItem === 'Profil' && <Profile experience = {data.experience} experienceNeeded = {data.experienceNeeded}/>}
                   {selectedItem === 'Walka' && <FightingScene />}
                   {selectedItem === 'Misje' && <Missions />}
+                  {selectedItem === 'Ustawienia' && <Profile experience = {data.experience} experienceNeeded = {data.experienceNeeded}/>}
                   <Tips />
               </div>
           </div>
